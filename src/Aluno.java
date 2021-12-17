@@ -30,6 +30,14 @@ public class Aluno {
     public String getStrNome() {return this.strNome;}
 
     /**
+     * Coloca a cotacao do teste no Aluno
+     * @param dblCotacaoTeste double com a cotação do Teste
+     */
+    public void setDblCotacaoTeste(double dblCotacaoTeste) {
+        this.dblCotacaoTeste = dblCotacaoTeste;
+    }
+
+    /**
      * Coloca uma resposta num determinado index do array de Respostas
      * @param intIndex inteiro para index do array
      * @param objResposta Resposta que vai ser colocada no array de Resultados
@@ -81,6 +89,6 @@ public class Aluno {
      * @return String com as informações do Aluno
      */
     @Override
-    public String toString(){return ("\nAluno " + this.strNome + " \t\tCotação Teste: " + this.dblCotacaoTeste);}
+    public String toString(){return ("\nAluno " + this.getStrNome() + " \t\tCotação Teste: " + this.getDblCotacaoTeste());}
 
 }

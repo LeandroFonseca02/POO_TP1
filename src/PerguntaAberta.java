@@ -21,6 +21,6 @@ public class PerguntaAberta extends Pergunta{
      * @return String com as informações da Pergunta Aberta
      */
     @Override
-    public String toString(){return ("\nPergunta " + this.intPerguntaID + " tipo aberta " + " string " + this.strPergunta + " cotação máxima " + this.dblCotacao);}
+    public String toString(){return ("\nPergunta " + this.intPerguntaID + " tipo aberta string " + this.strPergunta + " cotação máxima " + this.dblCotacao);}
 
 }

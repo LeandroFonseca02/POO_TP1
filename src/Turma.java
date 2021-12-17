@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Turma {
 
     private final int intNumAlunos;
-    private final Aluno[] objAlunos;
+    private Aluno[] objAlunos;
 
     Turma(int intNumAlunos){
         this.intNumAlunos = intNumAlunos;
@@ -23,12 +23,19 @@ public class Turma {
     public int getIntNumAlunos() {return this.intNumAlunos;}
 
     /**
+     * Coloca o array e alunos da turma
+     * @param objAlunos array de alunos da turma
+     */
+    public void setObjAlunos(Aluno[] objAlunos){
+        this.objAlunos = objAlunos;
+    }
+    /**
      * Recebe o input das respostas dos alunos
      * @param objScanner Scanner do ficheiro de input
      * @param intNumPerguntas Numero de perguntas do teste
      */
     public void getObjAlunosInput(Scanner objScanner, int intNumPerguntas){
-        for (int i = 0; i < this.intNumAlunos; i++){
+        for (int i = 0; i < this.getIntNumAlunos(); i++){
             this.objAlunos[i] = new Aluno(objScanner.next(),intNumPerguntas);
             for(int j = 0; j < intNumPerguntas; j++)
                 this.objAlunos[i].setObjRespostaByIndex(j,new Resposta(objScanner.nextInt(),objScanner.next()));
